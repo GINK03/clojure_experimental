@@ -13,9 +13,15 @@
 ;(import '(com.google.gson.reflect TypeToken))
 (comment def (gson .Gson) )
 
+<<<<<<< HEAD
 (defn sender[x y](postal/send-message ^{ :host "smtp.muumuu-mail.com"
                                 :user "1@cuttysark.jp.net"
                                 :pass y
+=======
+(defn sender[x](postal/send-message ^{ :host "smtp.gmail.com"
+                                :user "angeldust03"
+                                :pass "*****"
+>>>>>>> dfa102f9a3ab57a088e56bbbd7e31b58b9633bf3
                                 :ssl :yes!!!11}
                            {  :from "1@cuttysark.jp.net"
                               :to "angeldust03@gmail.com"
