@@ -13,23 +13,24 @@
 ;(import '(com.google.gson.reflect TypeToken))
 (comment def (gson .Gson) )
 
-(defn sender[x](postal/send-message ^{ :host "smtp.gmail.com"
-                                :user "angeldust03"
-                                :pass "catindog"
+(defn sender[x y](postal/send-message ^{ :host "smtp.muumuu-mail.com"
+                                :user "1@cuttysark.jp.net"
+                                :pass y
                                 :ssl :yes!!!11}
-                           {  :from "angeldust03@gmail.com"
-                              :to "koji.suzuki.cc@gmail.com"
-                              :subject "Hi!"
+                           {  :from "1@cuttysark.jp.net"
+                              :to "angeldust03@gmail.com"
+                              :subject "this is test"
                               :body "Test."})
 )
 
-(defn loopDo[x y](+ x y) )
+(defn forMacro[_x _y]( for[x (range _x)](sender x _y) ) )
 
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
   (
-    println "hoge" (add 10 20) (loopDo 0 10) (sender 0)
+    println "hoge" (first args) (add 10 20) (forMacro 1 (first args) )
+    ;(sender 0)
   )
 
 
