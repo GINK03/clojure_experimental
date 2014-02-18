@@ -15,7 +15,7 @@
 
 (defn sender[x](postal/send-message ^{ :host "smtp.gmail.com"
                                 :user "angeldust03"
-                                :pass "catindog"
+                                :pass "*****"
                                 :ssl :yes!!!11}
                            {  :from "angeldust03@gmail.com"
                               :to "koji.suzuki.cc@gmail.com"
